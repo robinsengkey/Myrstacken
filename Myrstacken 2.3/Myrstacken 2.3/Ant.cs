@@ -3,6 +3,11 @@
     private string name;
     private readonly int legsAmount;
 
+    /*
+     * Robin
+     * Snyggt användande av konstruktor! Jag gillar verkligen att den ser till att 
+     * namnet sparas i rätt format!
+     */
     public Ant(string name, int legsAmount)
     {
         name = name.Substring(0, 1).ToUpper() + name.Substring(1).ToLower();

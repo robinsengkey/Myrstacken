@@ -94,6 +94,14 @@ class Program
     {
         Console.WriteLine("Enter your ant's name: ");
         string name = Console.ReadLine();
+
+        /*
+         * Robin:
+         * Det äärsynd att du omvandlar namnet här, när du redan gör det i konstruktorn. 
+         * Det förstör lite det snygga du gjorde där. Det hade varit extra snuggt om du
+         * även utförde kontrollen av längden och mellanslag i Ant-konstruktorn! Kanske
+         * lite överkurs dock.
+         */
         name = name.Substring(0, 1).ToUpper() + name.Substring(1).ToLower();
 
         if (name.Length > 10)
@@ -170,6 +178,10 @@ class Program
         Console.WriteLine("");
     }
 
+    /*
+     * Robin:
+     * Bra kommentar! Dock så kollar den inte mot konstruktorn, utan mot det som finns sparat i 
+     */
     /// <summary>
     /// Checks whether there are any ants in the anthill at all - if not - writes corresponding error message and returns to called method
     /// 
@@ -222,6 +234,11 @@ class Program
     private Ant SearchByName()
     {
         Console.WriteLine("Enter an ant's name to search for: ");
+        /*
+         * Robin:
+         * vi hade kunnat effektivisera genom att kalla på ToLower() direkt. Nu så utförs det arbetet
+         * en gång extra för varje iteration efter den första.
+         */
         string input = Console.ReadLine();
 
         for (int i = 0; i < ants.Count; i++)
@@ -313,3 +330,21 @@ class Program
         Environment.Exit(0);
     }
 }
+
+
+/*
+ * Robin:
+ * Jag har inte så mycket att säga förutom bra jobbat! 
+ * Du har en konsekvent kodningsstil med tydlig namngivning. Koden är
+ * robust vad jag kan se, och jag hitar inga uppenbara logiska fel.
+ * 
+ * Jag hade kanske tänkt på att hålla kommentarerna lite kortare, 
+ * och dubbelkolla så att du inte skriver in någon information som är felaktig. 
+ * 
+ * Det har varit väldigt kul att se dig arbeta på lektionen. Du kommunicerar 
+ * bra och tydligt runt de problem som du stöter på. Det är jättebra att du
+ * tar ansvar för ditt eget lärande och föreslår förändringar i klassrummet
+ * för att förbättra din lärandesituation!
+ * 
+ * Fortsätt så här!
+ */
